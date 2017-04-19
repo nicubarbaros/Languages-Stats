@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-require('./index.css');
-
 import App from './components/App';
 
+require('./index.css');
+
 ReactDOM.render(
-  <App name="Nick"/>,
+  <App/>,
   document.getElementById('app')
 );
