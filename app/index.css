@@ -19,6 +19,25 @@ a {
   margin: 0 auto;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  width: 40%;
+}
+
+.column input {
+  width: 80%;
+  margin: 15px 0;
+  padding: 5px;
+  border: 1px solid black;
+}
+
 .avatar {
   width: 150px;
   border-radius: 50%;
