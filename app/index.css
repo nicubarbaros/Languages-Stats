@@ -10,6 +10,10 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: #d0021b;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -49,4 +53,32 @@ li {
 .popular-rank {
   font-size: 20px;
   margin: 10px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav li {
+  margin-right: 15px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.home--component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  padding: 10px 50px;
+  background-color: black;
+  color: white;
+}
+
+.button:hover{
+  background-color:#d0021b;
 }
