@@ -22,13 +22,14 @@ a {
 .row {
   display: flex;
   justify-content: space-between;
+  margin-top: 100px;
 }
 
 .column {
   display: flex;
   flex-direction: column; 
   align-items: center;
-  width: 40%;
+  width: 500px;
 }
 
 .column input {
@@ -36,8 +37,13 @@ a {
   margin: 15px 0;
   padding: 5px;
   border: 1px solid black;
+  font-size: 15px;
 }
 
+.header {
+  text-align: center;
+  font-size: 32px;
+}
 .avatar {
   width: 150px;
   border-radius: 50%;
@@ -96,8 +102,23 @@ a {
   padding: 10px 50px;
   background-color: black;
   color: white;
+  border: none;
+  font-size: 16px;
 }
 
 .button:hover{
   background-color:#d0021b;
+}
+
+.reset {
+  border: none;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #d0021b;
+}
+
+.reset:hover{
+  cursor: pointer;
 }
