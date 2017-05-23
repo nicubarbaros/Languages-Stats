@@ -1,8 +1,10 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const loaders = require('./webpack-loaders');
+
 module.exports = {
-  entry: './app/index.js',
+  entry: ['babel-polyfill', './app/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
@@ -12,6 +14,10 @@ module.exports = {
     rules: [
       {test: /\.(js)$/, use: 'babel-loader'},
       {test: /\.css$/, use: ['style-loader', 'css-loader']}
+    ],
+
+    loaders: [
+      loaders.babel
     ]
   },
   devServer: {

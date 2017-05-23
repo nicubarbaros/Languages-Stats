@@ -6,6 +6,7 @@ import Home from './Home';
 import Nav from './Nav';
 import Popular from './Popular';
 import Results from './Results';
+
 class App extends Component {
   render() {
     return (

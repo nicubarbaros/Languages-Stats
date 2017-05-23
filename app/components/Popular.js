@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import * as api from '../utils/api';
+import {fetchPopularRepos} from '../utils/api';
 
 // Stateless functional component
 const SelectLanguage = (props) => {
@@ -76,7 +76,7 @@ class Popular extends React.Component {
       }
     });
 
-    api.fetchPopularRepos(lang)
+    fetchPopularRepos(lang)
       .then(function (repos) {
         this.setState(function(){
           return {
