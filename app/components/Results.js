@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import queryString from 'query-string';
 
+import Loader from './Loader';
 import PlayerPreview from './PlayerPreview';
 import { battle } from '../utils/api';
 
@@ -90,7 +91,7 @@ class Results extends Component {
     var loser = this.state.loser;
     var loading = this.state.loading;
     if (loading === true) {
-      return <p> loading </p>
+      return <Loader text="Wait, its getting data!"/>
     }
 
     if (error) {

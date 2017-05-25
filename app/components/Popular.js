@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import Loader from './Loader';
+
 import {fetchPopularRepos} from '../utils/api';
 
 // Stateless functional component
@@ -53,7 +55,7 @@ SelectLanguage.propTypes = {
   onSelect: PropTypes.func.isRequired
 }
 
-class Popular extends React.Component {
+class Popular extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -95,7 +97,7 @@ class Popular extends React.Component {
           onSelect={this.updateLanguage}/>
 
         {!this.state.repos
-          ? <p>Loading</p>
+          ? <Loader text="Loading popular users"/>
           : <RepoGrid repos = {this.state.repos}/>}
       </div>
     )
